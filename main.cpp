@@ -12,7 +12,8 @@ int main()
     if (x == i)
         cout << " jest liczba pierwsza" << endl;
 
-    else {
+    else 
+    {
         do
         {
             if ((x % i == 0) || (x <= 1))
