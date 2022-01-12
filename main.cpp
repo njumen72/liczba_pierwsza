@@ -4,33 +4,29 @@ using namespace std;
 
 int main()
 {
-    int x, i = 2;
+    int liczba, i = 2;
     cout << "Wpisz liczbe: ";
-    cin >> x;
-    cout << endl << x;
+    cin >> liczba;
+    bool pierwszaFlag = true;
 
-    if (x == i)
-        cout << " jest liczba pierwsza" << endl;
-
-    else 
+    while (liczba > i)
     {
-        do
+        if ((liczba % i == 0) || (liczba <= 1))
         {
-            if ((x % i == 0) || (x <= 1))
-            {
-                cout << " nie";
-                break;
-            }
+            pierwszaFlag = false;
+            break;
+        }
 
-            else
-                i++;
-        } while (x > i);
-
-        cout << " jest liczba pierwsza" << endl;
+        i++;
     }
+
+    if (pierwszaFlag && liczba > 1)
+        cout << liczba << " jest liczba pierwsza" << endl;
+    else
+        cout << liczba << " nie jest liczba pierwsza!" << endl;
 
     cout << endl;
     system ("pause");
     return 0;
 }
-//by njumen72
+
